@@ -9,6 +9,10 @@ html, body {
   @apply font-yacht antialiased h-screen w-screen !important;
 }
 
+@media (pointer: coarse) {
+  
+}
+
 .mat-ui-shadow {
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
 }
@@ -52,4 +56,8 @@ html, body {
 
 .btn {
   @apply flex flex-row justify-center items-center rounded text-sm text-white uppercase font-semibold tracking-widest p-4 bg-btn-grn h-9;
+}
+
+.content-tabbed-nav {
+  @apply p-2 text-black dark:text-white cursor-pointer bg-transparent hover:bg-gray-300 dark:hover:bg-gray-500 box-border;
 }
