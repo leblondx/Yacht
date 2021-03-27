@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useFetch } from "../../../../utils";
 
 const Images = () => {
-  return (
-    <div>
-      IMAGES
-    </div>
-  )
-}
+  const { data, error, loading } = useFetch("/api/resources/images/");
 
-export default Images
+  useEffect(() => {
+    error && console.log(error);
+    // data && console.log(data);
+  }, [error]);
+
+  return (
+    <>
+      <div className={"text-2xl"}>IMAGES</div>
+      <div>
+        {loading ? (
+          <span>loading...</span>
+        ) : (
+          <span>
+            whoa! Thats a lot of data for {data && data.length} objects...
+          </span>
+        )}
+      </div>
+    </>
+  );
+};
+
+export default Images;

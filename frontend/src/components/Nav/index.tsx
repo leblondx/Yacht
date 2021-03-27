@@ -49,7 +49,7 @@ const Nav = () => {
   useEffect(() => {
     // currentView is set to a string that resembles a ViewState enum value or ""
     const currentView = window.location.pathname.substring(1).toUpperCase();
-    
+
     /*
      * this sets the current appViewState to match the link you are currently viewing in cases
      * where you navigated to yacht from somewhere other than the dashboard, but if you open

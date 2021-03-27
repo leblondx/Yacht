@@ -34,12 +34,12 @@ const Resources = () => {
         className={
           "flex flex-row text-sm text-white uppercase font-semibold tracking-widest"
         }
+        data-testid={"tabbed-nav-container"}
       >
         <div
           className={clsx(
             "content-tabbed-nav",
-            currentView === ResourcesView.IMAGES &&
-              "border-b-2 border-btn-grn"
+            currentView === ResourcesView.IMAGES && "border-b-2 border-btn-grn"
           )}
           onClick={() => setCurrentView(ResourcesView.IMAGES)}
         >
@@ -48,8 +48,7 @@ const Resources = () => {
         <div
           className={clsx(
             "content-tabbed-nav",
-            currentView === ResourcesView.VOLUMES &&
-              "border-b-2 border-btn-grn"
+            currentView === ResourcesView.VOLUMES && "border-b-2 border-btn-grn"
           )}
           onClick={() => setCurrentView(ResourcesView.VOLUMES)}
         >
@@ -66,7 +65,9 @@ const Resources = () => {
           Networks
         </div>
       </div>
-      <div className={"p-2"}>{renderView()}</div>
+      <div className={"p-2"} data-testid={"view-container"}>
+        {renderView()}
+      </div>
     </ContentWrapper>
   );
 };
