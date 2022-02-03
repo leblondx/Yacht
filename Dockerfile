@@ -40,7 +40,6 @@ RUN \
 	pip3 install --upgrade pip &&\
 	gem install sass &&\
 	echo "**** Installing Python Modules ****" && \
-	pip3 install wheel &&\
 	pip3 install -r requirements.txt &&\
 	echo "**** Cleaning Up ****" &&\
 	apk del --purge \
