@@ -29,6 +29,8 @@ RUN \
 	make \
 	python3-dev \
 	libffi-dev \
+	libressl-dev \
+	musl-dev \
 	mysql-dev \
 	postgresql-dev \
 	ruby-dev &&\
