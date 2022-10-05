@@ -1,0 +1,28 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@vue/cli > inquirer > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > @vue/cli-ui > lowdb > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > vue-codemod > inquirer > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > vue-codemod > @babel/core > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > @vue/cli-ui > portfinder > async > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > vue-codemod > @babel/preset-env > @babel/plugin-transform-block-scoping > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > vue-codemod > jscodeshift > @babel/core > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > vue-codemod > jscodeshift > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > vue-codemod > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-define-map > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > vue-codemod > @babel/preset-env > @babel/plugin-transform-unicode-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
+    - '@vue/cli > vue-codemod > @babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash':
+        patched: '2022-10-05T16:01:40.781Z'
