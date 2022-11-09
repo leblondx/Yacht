@@ -11,7 +11,7 @@ COPY ./frontend/ .
 RUN npm run build
 
 # Setup Container and install Flask
-FROM lsiobase/alpine:3.15 as deploy-stage
+FROM lsiobase/alpine:3.16 as deploy-stage
 # MAINTANER Your Name "info@selfhosted.pro"
 
 # Set Variables
@@ -26,6 +26,7 @@ RUN \
 	echo "**** install build packages ****" && \
 	apk add --no-cache --virtual=build-dependencies \
 	g++ \
+	gcc \
 	make \
 	python3-dev \
 	libffi-dev \
@@ -33,6 +34,8 @@ RUN \
 	musl-dev \
 	mysql-dev \
 	postgresql-dev \
+	openssl-dev \
+	cargo \
 	ruby-dev &&\
 	echo "**** install packages ****" && \
 	apk add --no-cache \
