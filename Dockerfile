@@ -46,6 +46,7 @@ RUN \
 	gem install sass &&\
 	echo "**** Installing Python Modules ****" && \
 	pip3 install wheel setuptools &&\
+	printf '[global]\nextra-index-url=https://www.piwheels.org/simple' >/etc/pip.conf &&\
 	pip3 install cryptography==3.4.8 &&\
 	pip3 install -r requirements.txt &&\
 	echo "**** Cleaning Up ****" &&\
