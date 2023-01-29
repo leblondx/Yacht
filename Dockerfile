@@ -6,7 +6,7 @@ ENV VUE_APP_VERSION=${VUE_APP_VERSION}
 
 WORKDIR /app
 COPY ./frontend/package*.json ./
-RUN npm install
+RUN npm i -g npm@latest
 COPY ./frontend/ .
 RUN npm run build
 
